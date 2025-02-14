@@ -1,0 +1,8 @@
+[package]
+name = "rusty-keys-daemon"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-lc-rs = {workspace = true}
+libsecret = "0.7.0"

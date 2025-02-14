@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["rusty-keys-cli", "rusty-keys-daemon", "rusty-keys-gui", "rusty-keys-ipc"]
+
+[workspace.dependencies.aws-lc-rs]
+version = "1.12.2" 
+features = ["fips"]
+
+[workspace.dependencies.prost]
+version = "0.13.5"
+features = ["derive"]
