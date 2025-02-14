@@ -5,3 +5,5 @@ edition = "2021"
 
 [dependencies]
 aws-lc-rs = {workspace = true}
+clap = {workspace = true}
+rusty-keys-ipc = {path = "../rusty-keys-ipc"}

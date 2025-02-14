@@ -3,9 +3,20 @@ resolver = "2"
 members = ["rusty-keys-cli", "rusty-keys-daemon", "rusty-keys-gui", "rusty-keys-ipc"]
 
 [workspace.dependencies.aws-lc-rs]
-version = "1.12.2" 
+git = "https://github.com/NoahSprenger/aws-lc-rs"
 features = ["fips"]
+
+[workspace.dependencies.shared_memory]
+git = "https://github.com/NoahSprenger/shared_memory"
 
 [workspace.dependencies.prost]
 version = "0.13.5"
 features = ["derive"]
+
+[workspace.dependencies.clap]
+version = "4.5.27"
+features = ["unicode", "derive"]
+
+[workspace.dependencies.serde]
+version = "1.0.217" 
+features = ["derive"] 
