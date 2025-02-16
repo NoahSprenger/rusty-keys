@@ -2,6 +2,14 @@
 name = "rusty-keys-ipc"
 version = "0.1.0"
 edition = "2021"
+build = "build.rs"
 
 [dependencies]
 aws-lc-rs = {workspace = true}
+prost = {workspace = true}
+
+[build-dependencies]
+prost-build = {workspace = true}
+
+[features]
+daemon = []

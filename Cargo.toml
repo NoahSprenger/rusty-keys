@@ -13,6 +13,12 @@ git = "https://github.com/NoahSprenger/shared_memory"
 version = "0.13.5"
 features = ["derive"]
 
+[workspace.dependencies.prost-types]
+version = "0.13"
+
+[workspace.dependencies.prost-build]
+version = "0.13.5"
+
 [workspace.dependencies.clap]
 version = "4.5.27"
 features = ["unicode", "derive"]

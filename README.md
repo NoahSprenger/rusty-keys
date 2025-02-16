@@ -3,7 +3,7 @@ A rusty key manager to replace pre-installs like gnome-keyring.
 Using FIPS-compliant Rust crypto libraries like 
 
 ## Install 
-- `sudo apt install libsecret-1-dev libgtk-4-dev cmake`
+- `sudo apt install libsecret-1-dev libgtk-4-dev cmake protobuf-compiler`
 - `cargo build`
 - ``
 

@@ -8,5 +8,9 @@ const CREDENTIAL_LEN: usize = digest::SHA384_OUTPUT_LEN;
 pub type Credential = [u8; CREDENTIAL_LEN];
 
 struct PasswordIPC {
-    pbkdf2_interations: NonZeroU32, 
+    pbkdf2_iterations: NonZeroU32, 
 }
+
+impl PasswordIPC {
+    
+} 

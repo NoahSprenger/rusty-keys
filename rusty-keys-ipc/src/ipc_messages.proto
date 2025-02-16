@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package rusty_keys.ipc;
+
+enum AlgorithmType {
+    // from aws-lc-rs
+    KERBER = 0;
+}
+
+message PublicKey {
+    AlgorithmType algorithm_type = 1;
+    string public_key = 2;
+}
+
+message PrivateKey {
+    AlgorithmType algorithm_type = 1;
+    bytes private_key = 2;
+}
+
+enum CommandType {
+    DeleteKey = 0;
+    AddKey = 1;
+    EstablishSession = 2; 
+}
+
+message Command {
+    CommandType command_type = 1;
+    oneof data {
+        PublicKey public_key = 2;
+        PrivateKey private_key = 3;
+    }
+}
+
+enum Notification {
+    ERROR = 0; 
+}
+
+message Transaction {
+    uint32 authenticated_session_id = 1;
+    oneof data {
+        Command command = 2;
+        Notification Notification = 3; 
+    }
+}
